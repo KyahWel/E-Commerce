@@ -1,8 +1,23 @@
+import bcrypt from 'bcryptjs';
 
-const data={
+const data= {
+    users: [
+       {
+         name: 'mabuX',
+         email: 'admin@example.com',
+         password: bcrypt.hashSync('1234', 8),
+         isAdmin: true,
+       },
+       {
+          //customer
+         name: 'John',
+         email: 'user@example.com',
+         password: bcrypt.hashSync('1234', 8),
+         isAdmin: false,
+       },
+     ],
     products:[
         {
-            _id:"1",
             name: "Naruto Pop Pin",
             category: "Funko Pop",
             image: "/images/Naruto_Pop_Pin.jpg",
@@ -15,7 +30,6 @@ const data={
         }, 
 
         {
-            _id:"2",
             name: "Itachi Funko Pop",
             category: "Funko Pop",
             image: "/images/Itachi_A.png",
@@ -28,7 +42,6 @@ const data={
         }, 
 
         {
-            _id:"3",
             name: "Sasuke Funko Pop",
             category: "Funko Pop",
             image: "/images/Sasuke_A.png",
@@ -41,7 +54,7 @@ const data={
         }, 
 
         {
-            _id:"4",
+
             name: "Itachi Pop Pin",
             category: "Funko Pop",
             image: "/images/Itachi_Pop_Pin.png",
@@ -54,7 +67,7 @@ const data={
         }, 
 
         {
-            _id:"5",
+ 
             name: "Minato Funko Pop",
             category: "Funko Pop",
             image: "/images/Minato_A.jpg",
@@ -68,7 +81,7 @@ const data={
 
         
         {
-            _id:"6",
+ 
             name: "Sasuke Rinnegan",
             category: "Funko Pop",
             image: "/images/Sasuke_A.png",
@@ -81,7 +94,7 @@ const data={
         }, 
 
         {
-            _id:"7",
+
             name: "Sasuke Pop Pin",
             category: "Funko Pop",
             image: "/images/Sasuke_Pop_Pin.png",
@@ -94,7 +107,7 @@ const data={
         }, 
 
         {
-            _id:"8",
+
             name: "Kurama Funko",
             category: "Funko Pop",
             image: "/images/Kurama_A.png",
@@ -107,7 +120,7 @@ const data={
         }, 
 
         {
-            _id:"9",
+
             name: "Kabuto Funko",
             category: "Funko Pop",
             image: "/images/Kabuto_A.png",
@@ -120,7 +133,7 @@ const data={
         }, 
 
         {
-            _id:"10",
+
             name: "Naruto Jacket",
             category: "Jacket",
             image: "/images/Naruto_Bomber.jpg",
@@ -133,7 +146,7 @@ const data={
         }, 
 
         {
-            _id:"11",
+
             name: "Hokage Jacket",
             category: "Jacket",
             image: "/images/Naruto_Bomber_B.jpg",
@@ -146,7 +159,7 @@ const data={
         }, 
 
         {
-            _id:"12",
+
             name: "Naruto Jacket B",
             category: "Jacket",
             image: "/images/Naruto_Bomber_C.jpg",
@@ -159,7 +172,7 @@ const data={
         }, 
 
         {
-            _id:"13",
+
             name: "Naruto Jacket C",
             category: "Jacket",
             image: "/images/Naruto_Bomber_D.jpg",
@@ -172,7 +185,7 @@ const data={
         }, 
 
         {
-            _id:"14",
+
             name: "Akatsuki Jacket",
             category: "Jacket",
             image: "/images/Akatsuki_Bomber.jpg",
@@ -185,7 +198,7 @@ const data={
         }, 
 
         {
-            _id:"15",
+
             name: "Obito Jacket (W)",
             category: "Jacket",
             image: "/images/Obito_Jacket.jpg",
@@ -198,7 +211,7 @@ const data={
         }, 
        
         {
-            _id:"16",
+
             name: "Obito Jacket (B)",
             category: "Jacket",
             image: "/images/Obito_Jacket_B.jpg",
@@ -210,7 +223,7 @@ const data={
             description: "High quality product"
         }, 
         {
-            _id:"17",
+
             name: "Naruto Sage Mode",
             category: "Funko Pop",
             image: "/images/Sage_Funko_Pop.jpg",
@@ -223,7 +236,7 @@ const data={
         }, 
 
         {
-            _id:"18",
+
             name: "Naruto Headband",
             category: "Accesories",
             image: "/images/Naruto_Headband.jpg",
@@ -235,7 +248,7 @@ const data={
             description: "High quality product"
         }, 
         {
-            _id:"19",
+
             name: "Airpods Case A",
             category: "Accesories",
             image: "/images/Airpod_Case.jpg",
@@ -248,7 +261,7 @@ const data={
         }, 
 
         {
-            _id:"20",
+
             name: "Airpods Case B",
             category: "Accesories",
             image: "/images/Airpod_Case_B.jpg",
